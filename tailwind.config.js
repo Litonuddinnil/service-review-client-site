@@ -7,12 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        text: "#050218",
-        background: "#eeedfd",
-        primary: "#4225ed",
-        secondary: "#f49081",
-        accent: "#f1d154",
-        card:"#03028c0d",
+        text: "#040f12",
+        background: "#eff8fb",
+        primary: "#39afcf",
+        secondary: "#e184bb",
+        accent: "#db716c",
+        card:"#26A3C60D.",
       },
     },
   },
