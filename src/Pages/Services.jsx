@@ -3,11 +3,10 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-
+import backgroundPic from "../assets/bg.png"
 const Services = () => {
-  const [services, setServices] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [services, setServices] = useState([]); 
+   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,41 +26,51 @@ const Services = () => {
     fetchServices();
   }, []);
 
-  const filteredServices =
-    selectedCategory === "All"
-      ? services
-      : services.filter((service) => service.category === selectedCategory);
+   
 
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
     hover: { scale: 1.05 },
   };
+  const filteredServices = services.filter(service =>
+    service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    service.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div >
       <Helmet>
         <title>Home | Service</title>
       </Helmet>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold">Services All</h2>
-        <select
-          className="border px-4 py-2 rounded shadow-sm"
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
-        >
-          {categories.map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
-          ))}
-        </select>
+        <img className="w-full h-[300px]" src={backgroundPic} alt="" />
+     <div className="container mx-auto px-4 py-8 ">
+     <div className="flex items-center justify-between mb-6">
+     <div className="relative flex flex-col justify-end z-10">
+          <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mb-6">
+            Service All
+          </h2>
+          <div
+            className="absolute inset-0 z-[-1] opacity-60 top-5 bg-gradient-to-b from-transparent to-[#ff7f50]"
+            style={{ height: "50%" }}
+          ></div>
+        </div> 
+        <input
+          type="text"
+          placeholder="Search services..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          className="p-2 border border-gray-300 rounded-md w-full md:w-1/2"
+        />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredServices.map((service) => (
+        { filteredServices.map((service) => (
           <motion.div
             key={service._id}
-            className="p-4 border rounded-lg shadow-lg bg-white"
+            className="p-4 border rounded-lg shadow-lg bg-card"
             variants={cardVariants}
             initial="hidden"
             animate="visible"
@@ -91,6 +100,7 @@ const Services = () => {
           </motion.div>
         ))}
       </div>
+     </div>
     </div>
   );
 };

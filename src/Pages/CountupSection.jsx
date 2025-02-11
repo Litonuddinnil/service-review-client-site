@@ -31,7 +31,7 @@ const CountupSection = () => {
   },[])
 
   return (
-    <div className="bg-gray-100 py-10">
+    <div className="bg-background py-10">
       <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
         Our Platform Stats
       </h2>

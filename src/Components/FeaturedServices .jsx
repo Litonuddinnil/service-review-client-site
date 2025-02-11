@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const FeaturedServices = () => {
   const [services, setServices] = useState([]);
@@ -82,6 +82,11 @@ const FeaturedServices = () => {
           </motion.div>
         ))}
       </div>
+      <div className="mt-8 flex items-center justify-center">
+      <Link to="/services" className="btn text-lg text-accent btn-outline  ">
+            Service All...
+         </Link>
+        </div>
     </div>
   );
 };

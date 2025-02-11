@@ -35,7 +35,7 @@ const partners = [
 
 const MeetOurPartners = () => {
   return (
-    <div className="py-12 bg-gray-100">
+    <div className="py-4 bg-background">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800">Meet Our Partners</h2>
         <p className="text-gray-600">
@@ -46,7 +46,7 @@ const MeetOurPartners = () => {
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="card bg-white shadow-lg p-4 rounded-lg hover:shadow-xl"
+            className="card bg-card shadow-lg p-4 rounded-lg hover:shadow-xl"
           >
             <div className="flex items-center mb-4">
               <img

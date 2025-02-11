@@ -6,7 +6,7 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="bg-background text-text py-10">
+    <footer className="bg-[#212E37] py-12">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
           {/* Website Logo and Description */}
@@ -17,9 +17,9 @@ const Footer = () => {
                 alt="Service Review System"
                 className="w-12 h-12 rounded-full"
               />
-              <h1 className="text-2xl font-bold">Service Review System</h1>
+              <h1 className="text-2xl font-bold text-white">Service Review System</h1>
             </div>
-            <p className="mt-4 text-sm text-gray-100">
+            <p className="mt-4 text-sm text-[#B1B1B1]">
               Service Review System is a comprehensive platform that allows
               users to share their experiences and feedback on various services.
               Whether you're looking to evaluate a local business, review a
@@ -36,8 +36,8 @@ const Footer = () => {
           </div> 
           {/* Useful Links */}
           <div>
-            <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
-            <ul className="space-y-2 text-gray-200">
+            <h2 className="text-xl font-semibold text-white mb-4">Quick Links</h2>
+            <ul className="space-y-2 text-[#B1B1B1]">
               <li>
                 <a href="/" className="hover:text-blue-500">
                   Home
@@ -57,7 +57,7 @@ const Footer = () => {
             </ul>
              {/* Social Media Links */}
           <div>
-            <h2 className="text-xl font-semibold mb-4">Follow Us</h2>
+            <h2 className="text-xl text-white font-semibold mb-4">Follow Us</h2>
             <div className="flex space-x-4">
               <a
                 href="https://facebook.com"
@@ -100,7 +100,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-8 border-t border-gray-200 pt-4 text-center text-gray-100">
+        <div className="mt-8 border-t border-background pt-4 text-center text-[#B1B1B1]">
           <p>&copy; Upcoming 2025 Service Review System. All Rights Reserved.</p>
           <p>
             Designed with ❤️ by{" "}
