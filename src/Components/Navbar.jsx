@@ -106,7 +106,7 @@ const Navbar = () => {
         {user ? (
           <>
             <button
-              className="btn btn-error text-white rounded-md"
+              className="btn btn-error text-text rounded-md"
               onClick={logOut}
             >
               Logout

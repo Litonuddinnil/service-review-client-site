@@ -136,7 +136,7 @@ const ServiceDetails = () => {
          </div>
           <button
             type="submit"
-            className="w-full py-2 mt-6 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+            className="w-full py-2 mt-6 bg-blue-600 text-text font-semibold rounded-md hover:bg-blue-700 transition duration-200"
           >
             Add Review
           </button>

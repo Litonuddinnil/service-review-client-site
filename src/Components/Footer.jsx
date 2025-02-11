@@ -6,7 +6,7 @@ import { IoLogoYoutube } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10">
+    <footer className="bg-background text-text py-10">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6">
           {/* Website Logo and Description */}
@@ -65,7 +65,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:opacity-90"
               >
-                <FaFacebook className="text-white" />
+                <FaFacebook className="text-text" />
               </a>
 
               <a
@@ -74,7 +74,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-cyan-600 hover:opacity-90"
               >
-                <RiTwitterXLine className="text-white" />
+                <RiTwitterXLine className="text-text" />
               </a>
 
               <a
@@ -83,7 +83,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-pink-700 hover:opacity-90"
               >
-                <BsInstagram className="text-white" />
+                <BsInstagram className="text-text" />
               </a>
 
               <a
@@ -92,7 +92,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-red-700 hover:opacity-90"
               >
-                <IoLogoYoutube className="text-white" />
+                <IoLogoYoutube className="text-text" />
               </a>
             </div>
           </div>
@@ -106,7 +106,7 @@ const Footer = () => {
             Designed with ❤️ by{" "}
             <a
               href="https://job-portal-74d1e.web.app/"
-              className="hover:text-white underline"
+              className="hover:text-text underline"
             >
               Liton Uddin
             </a>

@@ -10,7 +10,7 @@ const ErrorPage = () => {
       <p className="text-gray-600 text-lg mb-8">The page you're looking for doesn't exist or an error occurred.</p>
       <button
         onClick={() => navigate('/')}
-        className="px-6 py-3 bg-gradient-to-r from-[#00b894] to-[#073132] text-white rounded-lg shadow hover:opacity-90 transition"
+        className="px-6 py-3 bg-gradient-to-r from-[#00b894] to-[#073132] text-text rounded-lg shadow hover:opacity-90 transition"
       >
         Go to Home Page
       </button>

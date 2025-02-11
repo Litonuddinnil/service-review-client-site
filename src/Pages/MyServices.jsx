@@ -113,13 +113,13 @@ const MyServices = () => {
               <td className="p-4 border-b">
              <div className='flex items-center '>
              <button 
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+                  className="bg-blue-600 text-text px-4 py-2 rounded-md hover:bg-blue-700"
                   onClick={() => handleUpdate(service)}
                 >
                   Update
                 </button>
                 <button
-                  className="ml-4 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
+                  className="ml-4 bg-red-600 text-text px-4 py-2 rounded-md hover:bg-red-700"
                   onClick={() => handleDelete(service)}
                 >
                   Delete
@@ -158,14 +158,14 @@ const MyServices = () => {
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+                  className="bg-blue-600 text-text px-4 py-2 rounded-md hover:bg-blue-700"
                 >
                   Update
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowUpdateModal(false)}
-                  className="ml-2 bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700"
+                  className="ml-2 bg-gray-600 text-text px-4 py-2 rounded-md hover:bg-gray-700"
                 >
                   Cancel
                 </button>
@@ -184,13 +184,13 @@ const MyServices = () => {
             <div className="flex justify-end">
               <button
                 onClick={(handleDeleteConfirm)}
-                className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
+                className="bg-red-600 text-text px-4 py-2 rounded-md hover:bg-red-700"
               >
                 Yes, Delete
               </button>
               <button
                 onClick={handleDeleteCancel}
-                className="ml-2 bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700"
+                className="ml-2 bg-gray-600 text-text px-4 py-2 rounded-md hover:bg-gray-700"
               >
                 Cancel
               </button>

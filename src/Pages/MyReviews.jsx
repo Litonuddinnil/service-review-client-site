@@ -91,7 +91,7 @@ const MyReviews = () => {
             <p className="mb-4">Rating: {review.rating} ⭐</p>
             <div className="flex gap-2">
               <button
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                className="px-4 py-2 bg-blue-500 text-text rounded hover:bg-blue-600"
                 onClick={() => {
                   setEditingReview(review);
                   setIsModalOpen(true);
@@ -100,7 +100,7 @@ const MyReviews = () => {
                 Update
               </button>
               <button
-                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                className="px-4 py-2 bg-red-500 text-text rounded hover:bg-red-600"
                 onClick={() => {
                   setSelectedReviewId(review._id);
                   setDeleteModalVisible(true);
@@ -160,7 +160,7 @@ const MyReviews = () => {
             </div>
             <button
               type="submit"
-              className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+              className="px-4 py-2 bg-green-500 text-text rounded hover:bg-green-600"
             >
               Save Changes
             </button>

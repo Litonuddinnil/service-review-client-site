@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const FeaturedServices = () => {
-  const [services, setServices] = useState([]); 
+  const [services, setServices] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get("https://service-review-system-server-site.vercel.app/servicesLimit");
+        const response = await axios.get(
+          "https://service-review-system-server-site.vercel.app/servicesLimit"
+        );
         setServices(response.data);
       } catch (error) {
         console.error("Error fetching services:", error);
@@ -18,6 +20,7 @@ const FeaturedServices = () => {
     };
     fetchServices();
   }, []);
+
   const cardVariants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
@@ -27,7 +30,16 @@ const FeaturedServices = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl font-bold mb-6">Featured Services</h2>
+        <div className="relative flex flex-col justify-end z-10">
+          <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mb-6">
+            Featured Services
+          </h2>
+          <div
+            className="absolute inset-0 z-[-1] opacity-60 top-5 bg-gradient-to-b from-transparent to-[#ff7f50]"
+            style={{ height: "50%" }}
+          ></div>
+        </div>
+
         <button
           onClick={() => navigate("/services")}
           className="btn btn-outline btn-info"
@@ -35,11 +47,13 @@ const FeaturedServices = () => {
           See More
         </button>
       </div>
+
+      {/* Services Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service) => (
           <motion.div
             key={service._id}
-            className="p-4 border rounded-lg shadow-lg bg-white"
+            className="p-4 border rounded-lg shadow-lg bg-card"
             variants={cardVariants}
             initial="hidden"
             animate="visible"

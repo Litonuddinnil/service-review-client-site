@@ -24,13 +24,9 @@ const Banner = () => {
           currentSlide === 1 ? "block" : "hidden"
         }`}
       >
-        <img
-          src="https://i.ibb.co/59yXyzd/slide1.webp"
-          className="w-full object-cover"
-          alt="Slide 1"
-        />
-        <div className="absolute flex items-center justify-center w-full h-full bg-black bg-opacity-50">
-          <div className="text-center text-white space-y-4">
+         
+        <div className="absolute flex items-center justify-center w-full h-full bg-background bg-opacity-50">
+          <div className="text-center text-text space-y-4">
             <Lottie animationData={animation1} className="w-40 mx-auto" />
             <h2 className="text-4xl font-bold">Welcome to Our Website</h2>
             <p className="text-lg">Discover amazing features and opportunities.</p>
@@ -44,13 +40,9 @@ const Banner = () => {
           currentSlide === 2 ? "block" : "hidden"
         }`}
       >
-        <img
-          src="https://i.ibb.co/g7HDWrP/slide2.webp"
-          className="w-full object-cover"
-          alt="Slide 2"
-        />
-        <div className="absolute flex items-center justify-center w-full h-full bg-black bg-opacity-50">
-          <div className=" text-center text-white space-y-4">
+         
+        <div className="absolute flex items-center justify-center w-full h-full bg-background bg-opacity-50">
+          <div className=" text-center text-text space-y-4">
             <Lottie animationData={animation2} className="w-40 mx-auto" />
             <h2 className="text-4xl font-bold">Innovate with Us</h2>
             <p className="text-lg">Join us to create something extraordinary.</p>
@@ -64,13 +56,9 @@ const Banner = () => {
           currentSlide === 3 ? "block" : "hidden"
         }`}
       >
-        <img
-          src="https://i.ibb.co/HHNRtXf/slide3.webp"
-          className="w-full object-cover"
-          alt="Slide 3"
-        />
-        <div className="absolute flex items-center justify-center w-full h-full bg-black bg-opacity-50">
-          <div className="text-center text-white space-y-4">
+       
+        <div className="absolute flex items-center justify-center w-full h-full bg-background bg-opacity-50">
+          <div className="text-center text-text space-y-4">
             <Lottie animationData={animation3} className="w-40 mx-auto" />
             <h2 className="text-4xl font-bold">Achieve Your Goals</h2>
             <p className="text-lg">Let us help you reach new heights.</p>

@@ -12,7 +12,7 @@ export default {
         primary: "#39afcf",
         secondary: "#e184bb",
         accent: "#db716c",
-        card:"#26A3C60D.",
+        card:"#26A3C60D",
       },
     },
   },
