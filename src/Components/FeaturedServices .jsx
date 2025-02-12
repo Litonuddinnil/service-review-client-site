@@ -32,7 +32,7 @@ const FeaturedServices = () => {
       <div className="flex items-center justify-between mb-8">
         <div className="relative flex flex-col justify-end z-10">
           <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mb-6">
-            Featured Services
+            Services Post
           </h2>
           <div
             className="absolute inset-0 z-[-1] opacity-60 top-5 bg-gradient-to-b from-transparent to-[#ff7f50]"
