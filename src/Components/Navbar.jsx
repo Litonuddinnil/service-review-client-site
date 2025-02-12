@@ -108,7 +108,7 @@ const Navbar = () => {
       
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-lg rounded-md p-4 md:hidden">
+        <div className="absolute top-16 left-0 w-full bg-gray-500 shadow-lg rounded-md p-4 md:hidden">
           <ul className="space-y-3">{links}</ul>
         </div>
       )}
