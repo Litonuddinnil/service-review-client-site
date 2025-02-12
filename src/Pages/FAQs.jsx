@@ -1,6 +1,4 @@
-import React from "react";
-import Loading from "./Loading";
-
+import React from "react";  
 const FAQs = () => {
     
   return (
