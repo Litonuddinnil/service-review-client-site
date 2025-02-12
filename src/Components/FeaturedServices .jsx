@@ -53,7 +53,7 @@ const FeaturedServices = () => {
         {services.map((service) => (
           <motion.div
             key={service._id}
-            className="p-4 border rounded-lg shadow-lg bg-card"
+            className="p-4 border rounded-md shadow-lg bg-card"
             variants={cardVariants}
             initial="hidden"
             animate="visible"
@@ -74,7 +74,7 @@ const FeaturedServices = () => {
               ${service.price}
             </p>
             <button
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
               onClick={() => navigate(`/services/${service._id}`)}
             >
               See Details

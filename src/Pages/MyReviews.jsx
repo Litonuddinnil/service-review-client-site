@@ -100,7 +100,7 @@ const MyReviews = () => {
                 Update
               </button>
               <button
-                className="px-4 py-2 bg-red-500  rounded-md hover:bg-red-600"
+                className="px-4 py-2 bg-red-500  rounded hover:bg-red-600"
                 onClick={() => {
                   setSelectedReviewId(review._id);
                   setDeleteModalVisible(true);
@@ -144,7 +144,7 @@ const MyReviews = () => {
               <textarea
                 name="reviewText"
                 defaultValue={editingReview.reviewText}
-                className="w-full px-4 py-2 border rounded-md"
+                className="w-full px-4 py-2 border rounded-md bg-gray-200"
               ></textarea>
             </div>
             <div className="mb-4">
@@ -155,12 +155,12 @@ const MyReviews = () => {
                 min="1"
                 max="5"
                 defaultValue={editingReview.rating}
-                className="w-full px-4 py-2 border-md"
+                className="w-full px-4 py-2 border rounded-md bg-gray-200"
               />
             </div>
             <button
               type="submit"
-              className="px-4 py-2 bg-green-500  rounded hover:bg-green-600"
+              className="px-4 py-2 bg-green-500  rounded-md hover:bg-green-600"
             >
               Save Changes
             </button>
