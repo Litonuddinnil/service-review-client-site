@@ -6,6 +6,7 @@ import SocialLogin from "../Components/SocialLogin";
 import useAuth from "../CustomHook/useAuth";
 import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { logIn } = useAuth();
@@ -40,19 +41,22 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-center min-h-screen  px-4 sm:px-6 lg:px-8">
+     <Helmet>
+             <title>Login Page</title>
+           </Helmet>
       {/* Animation Section */}
       <div className="hidden md:block w-1/2">
         <Lottie animationData={animationDataLogin} loop autoplay />
       </div>
 
       {/* Login Form */}
-      <div className="w-full max-w-md bg-white p-6 rounded-md shadow-md">
+      <div className="w-full max-w-md p-6 rounded-md shadow-md">
         {/* Header */}
-        <h2 className="text-2xl font-bold text-center text-gray-800 sm:text-3xl">
+        <h2 className="text-2xl font-bold text-center sm:text-3xl">
           Welcome Back
         </h2>
-        <p className="mt-2 text-sm text-center text-gray-600">
+        <p className="mt-2 text-sm text-center text-gray-500">
           Please sign in to your account
         </p>
 
@@ -104,6 +108,7 @@ const Login = () => {
             Sign In
           </button>
         </form> 
+         
         {/* Social Login */}
         <div className="mt-4">
           <SocialLogin />

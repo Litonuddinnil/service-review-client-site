@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import useAuth from "../CustomHook/useAuth";
 import registerAnimationData from "../assets/register.json"
 import Lottie from "lottie-react";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUserData, setUser, updateProfileUser } = useAuth();
@@ -92,10 +93,13 @@ const Register = () => {
     <div
       className="min-h-screen flex items-center justify-center bg-cover bg-center " 
     >
+      <Helmet>
+              <title>Register Page</title>
+            </Helmet>
           <div className="w-80 lg:w-1/2">
         <Lottie animationData={registerAnimationData} loop={true} />
       </div>
-      <div className="card bg-white bg-opacity-90 w-full max-w-lg shadow-2xl rounded-none">
+      <div className="card  bg-opacity-90 w-full max-w-lg shadow-2xl rounded-none">
         <h1 className="text-2xl mt-2 text-center font-bold">Register Your Account</h1>
         <form onSubmit={handlerRegister} className="card-body">
           <div className="form-control">
@@ -174,7 +178,7 @@ const Register = () => {
 
           <div className="form-control mt-6">
             <button
-              className="btn btn-outline rounded-none text-black disabled:opacity-50"
+              className="btn btn-outline rounded-none text-secondary disabled:opacity-50"
               disabled={!terms}
             >
               Register
