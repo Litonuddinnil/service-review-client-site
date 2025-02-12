@@ -1,15 +1,17 @@
 import React from "react";
+import Loading from "./Loading";
 
 const FAQs = () => {
+    
   return (
-    <div className="bg-background p-5 rounded-lg">
+    <div className=" p-5 rounded-md">
       <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
       
       <div className="space-y-2"> 
         {/* FAQ 1 */}
-        <div className="collapse collapse-arrow bg-white shadow-md">
+        <div className="collapse collapse-arrow   shadow-md">
           <input type="radio" name="faq-accordion" className="peer" />
-          <div className="collapse-title text-lg font-medium text-black peer-checked:text-blue-600">
+          <div className="collapse-title text-lg font-medium   peer-checked:text-blue-600">
           How do I post a service or find a service provider?
           </div>
           <div className="collapse-content">
@@ -17,20 +19,20 @@ const FAQs = () => {
           </div>
         </div>
         
-        <div className="collapse collapse-arrow bg-white shadow-md">
+        <div className="collapse collapse-arrow   shadow-md">
           <input type="radio" name="faq-accordion" className="peer" />
-          <div className="collapse-title text-lg font-medium text-black peer-checked:text-blue-600">
+          <div className="collapse-title text-lg font-medium   peer-checked:text-blue-600">
             Is there a fee for using your services?
           </div>
           <div className="collapse-content">
-            <p>No, our platform allows users to post and review services for free. However, premium features may be introduced in the future.</p>
+            <p className="text-[#67696E]">No, our platform allows users to post and review services for free. However, premium features may be introduced in the future.</p>
           </div>
         </div>
         
         {/* FAQ 3 */}
-        <div className="collapse collapse-arrow bg-white shadow-md">
+        <div className="collapse collapse-arrow   shadow-md">
           <input type="radio" name="faq-accordion" className="peer" />
-          <div className="collapse-title text-lg font-medium text-black peer-checked:text-blue-600">
+          <div className="collapse-title text-lg font-medium   peer-checked:text-blue-600">
             Can I request advice or support from your team?
           </div>
           <div className="collapse-content">
@@ -39,9 +41,9 @@ const FAQs = () => {
         </div>
         
         {/* FAQ 4 */}
-        <div className="collapse collapse-arrow bg-white shadow-md">
+        <div className="collapse collapse-arrow   shadow-md">
           <input type="radio" name="faq-accordion" className="peer" />
-          <div className="collapse-title text-lg font-medium text-black peer-checked:text-blue-600">
+          <div className="collapse-title text-lg font-medium   peer-checked:text-blue-600">
             How do I pay for the services I hire?
           </div>
           <div className="collapse-content">
@@ -50,9 +52,9 @@ const FAQs = () => {
         </div>
         
         {/* FAQ 5 */}
-        <div className="collapse collapse-arrow bg-white shadow-md">
+        <div className="collapse collapse-arrow  shadow-md">
           <input type="radio" name="faq-accordion" className="peer" />
-          <div className="collapse-title text-lg font-medium text-black peer-checked:text-blue-600">
+          <div className="collapse-title text-lg font-medium   peer-checked:text-blue-600">
             How can I ensure that I receive quality services?
           </div>
           <div className="collapse-content">
@@ -61,9 +63,9 @@ const FAQs = () => {
         </div>
         
         {/* FAQ 6 */}
-        <div className="collapse collapse-arrow bg-white shadow-md">
+        <div className="collapse collapse-arrow  shadow-md">
           <input type="radio" name="faq-accordion" className="peer" />
-          <div className="collapse-title text-lg font-medium text-black peer-checked:text-blue-600">
+          <div className="collapse-title text-lg font-medium   peer-checked:text-blue-600">
             Do I need to log in to access all the features of your website?
           </div>
           <div className="collapse-content">

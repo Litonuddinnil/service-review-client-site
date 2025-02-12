@@ -10,7 +10,7 @@ const ErrorPage = () => {
       <img src={gif} alt="" /> 
       <button
         onClick={() => navigate('/')}
-        className="px-6 py-3 bg-gradient-to-r from-[#00b894] to-[#073132] text-text rounded-lg shadow hover:opacity-90 transition"
+        className="px-6 py-3 bg-gradient-to-r from-[#00b894] to-[#073132]  rounded-md shadow hover:opacity-90 transition"
       >
         Go to Home Page
       </button>

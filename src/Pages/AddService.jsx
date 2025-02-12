@@ -39,16 +39,16 @@ const AddService = () => {
       </Helmet>
       
       <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Add a New Service</h2>
-        <p className="text-gray-500 mt-2">Fill in the details below to add your service.</p>
+        <h2 className="text-3xl md:text-4xl font-bold">Add a New Service</h2>
+        <p className=" mt-2">Fill in the details below to add your service.</p>
       </div>
 
-      <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg p-8">
+      <div className="max-w-2xl mx-auto shadow-xl rounded-md p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           
           {/* Service Image */}
           <div>
-            <label htmlFor="image" className="text-gray-700 font-medium">Service Image URL</label>
+            <label htmlFor="image" className="text-gray-500 font-medium">Service Image URL</label>
             <input
               type="url"
               id="image"
@@ -61,7 +61,7 @@ const AddService = () => {
 
           {/* Service Title */}
           <div>
-            <label htmlFor="title" className="text-gray-700 font-medium">Service Title</label>
+            <label htmlFor="title" className="text-gray-500 font-medium">Service Title</label>
             <input
               type="text"
               id="title"
@@ -74,7 +74,7 @@ const AddService = () => {
 
           {/* Company Name */}
           <div>
-            <label htmlFor="companyName" className="text-gray-700 font-medium">Company Name</label>
+            <label htmlFor="companyName" className="text-gray-500 font-medium">Company Name</label>
             <input
               type="text"
               id="companyName"
@@ -87,7 +87,7 @@ const AddService = () => {
 
           {/* Website */}
           <div>
-            <label htmlFor="website" className="text-gray-700 font-medium">Website</label>
+            <label htmlFor="website" className="text-gray-500 font-medium">Website</label>
             <input
               type="url"
               id="website"
@@ -100,7 +100,7 @@ const AddService = () => {
 
           {/* Description */}
           <div>
-            <label htmlFor="description" className="text-gray-700 font-medium">Description</label>
+            <label htmlFor="description" className="text-gray-500 font-medium">Description</label>
             <textarea
               id="description"
               name="description"
@@ -113,7 +113,7 @@ const AddService = () => {
 
           {/* Category */}
           <div>
-            <label htmlFor="category" className="text-gray-700 font-medium">Category</label>
+            <label htmlFor="category" className="text-gray-500 font-medium">Category</label>
             <input
               type="text"
               id="category"
@@ -126,7 +126,7 @@ const AddService = () => {
 
           {/* Price */}
           <div>
-            <label htmlFor="price" className="text-gray-700 font-medium">Price</label>
+            <label htmlFor="price" className="text-gray-500 font-medium">Price</label>
             <input
               type="number"
               id="price"
@@ -139,7 +139,7 @@ const AddService = () => {
 
           {/* Added Date */}
           <div>
-            <label htmlFor="addedDate" className="text-gray-700 font-medium">Added Date</label>
+            <label htmlFor="addedDate" className="text-gray-500 font-medium">Added Date</label>
             <input
               type="text"
               id="addedDate"
@@ -152,7 +152,7 @@ const AddService = () => {
 
           {/* User Email */}
           <div>
-            <label htmlFor="userEmail" className="text-gray-700 font-medium">Your Email</label>
+            <label htmlFor="userEmail" className="text-gray-500 font-medium">Your Email</label>
             <input
               type="email"
               id="userEmail"

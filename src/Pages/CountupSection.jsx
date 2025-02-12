@@ -31,28 +31,28 @@ const CountupSection = () => {
   },[])
 
   return (
-    <div className="bg-background py-10">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+    <div className=" py-8">
+      <h2 className="text-3xl font-bold text-center mb-8">
         Our Platform Stats
       </h2>
       <div className="flex flex-wrap justify-center gap-8"> 
-        <div className="card bg-base-200 shadow-md w-48 py-6 text-center">
+        <div className="card shadow-md w-48 py-6 text-center">
           <div className="text-5xl font-bold text-primary">
             <CountUp end={users.length} duration={2.5} />
           </div>
-          <p className="text-lg font-semibold text-gray-600 mt-2">Users</p>
+          <p className="text-lg font-semibold text-gray-500 mt-2">Users</p>
         </div> 
-        <div className="card bg-base-200 shadow-md w-48 py-6 text-center">
+        <div className="card shadow-md w-48 py-6 text-center">
           <div className="text-5xl font-bold text-secondary">
             <CountUp end={review.length} duration={2.5} />
           </div>
-          <p className="text-lg font-semibold text-gray-600 mt-2">Reviews</p>
+          <p className="text-lg font-semibold text-gray-500 mt-2">Reviews</p>
         </div> 
-        <div className="card bg-base-200 shadow-md w-48 py-6 text-center">
+        <div className="card shadow-md w-48 py-6 text-center">
           <div className="text-5xl font-bold text-accent">
             <CountUp end={data.length} duration={2.5} />
           </div>
-          <p className="text-lg font-semibold text-gray-600 mt-2">Services</p>
+          <p className="text-lg font-semibold text-gray-500 mt-2">Services</p>
         </div>
       </div>
     </div>

@@ -72,7 +72,7 @@ const MyReviews = () => {
         {reviews.map((review) => (
           <motion.div
             key={review._id}
-            className="p-4 border rounded-lg shadow-lg bg-white"
+            className="p-4 border rounded-md shadow-lg  "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >
@@ -84,14 +84,14 @@ const MyReviews = () => {
               />
               <div>
                 <h3 className="text-lg font-semibold">{review.title}</h3>
-                <p className="text-sm text-gray-600">{review.date}</p>
+                <p className="text-sm">{review.date}</p>
               </div>
             </div>
             <p className="mb-4">{review.reviewText}</p>
             <p className="mb-4">Rating: {review.rating} ⭐</p>
             <div className="flex gap-2">
               <button
-                className="px-4 py-2 bg-blue-500 text-text rounded hover:bg-blue-600"
+                className="px-4 py-2 bg-blue-500  rounded-md hover:bg-blue-600"
                 onClick={() => {
                   setEditingReview(review);
                   setIsModalOpen(true);
@@ -100,7 +100,7 @@ const MyReviews = () => {
                 Update
               </button>
               <button
-                className="px-4 py-2 bg-red-500 text-text rounded hover:bg-red-600"
+                className="px-4 py-2 bg-red-500  rounded-md hover:bg-red-600"
                 onClick={() => {
                   setSelectedReviewId(review._id);
                   setDeleteModalVisible(true);
@@ -136,7 +136,7 @@ const MyReviews = () => {
                 type="text"
                 value={editingReview.title}
                 readOnly
-                className="w-full px-4 py-2 border rounded bg-gray-200"
+                className="w-full px-4 py-2 border rounded-md bg-gray-200"
               />
             </div>
             <div className="mb-4">
@@ -144,7 +144,7 @@ const MyReviews = () => {
               <textarea
                 name="reviewText"
                 defaultValue={editingReview.reviewText}
-                className="w-full px-4 py-2 border rounded"
+                className="w-full px-4 py-2 border rounded-md"
               ></textarea>
             </div>
             <div className="mb-4">
@@ -155,12 +155,12 @@ const MyReviews = () => {
                 min="1"
                 max="5"
                 defaultValue={editingReview.rating}
-                className="w-full px-4 py-2 border rounded"
+                className="w-full px-4 py-2 border-md"
               />
             </div>
             <button
               type="submit"
-              className="px-4 py-2 bg-green-500 text-text rounded hover:bg-green-600"
+              className="px-4 py-2 bg-green-500  rounded hover:bg-green-600"
             >
               Save Changes
             </button>

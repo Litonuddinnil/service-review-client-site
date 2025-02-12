@@ -65,7 +65,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-blue-700 hover:opacity-90"
               >
-                <FaFacebook className="text-text" />
+                <FaFacebook className="" />
               </a>
 
               <a
@@ -74,7 +74,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-cyan-400 to-cyan-600 hover:opacity-90"
               >
-                <RiTwitterXLine className="text-text" />
+                <RiTwitterXLine className="" />
               </a>
 
               <a
@@ -83,7 +83,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-pink-700 hover:opacity-90"
               >
-                <BsInstagram className="text-text" />
+                <BsInstagram className="" />
               </a>
 
               <a
@@ -92,7 +92,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-red-700 hover:opacity-90"
               >
-                <IoLogoYoutube className="text-text" />
+                <IoLogoYoutube className="" />
               </a>
             </div>
           </div>
@@ -106,7 +106,7 @@ const Footer = () => {
             Designed with ❤️ by{" "}
             <a
               href="https://job-portal-74d1e.web.app/"
-              className="hover:text-text underline"
+              className="hover: underline"
             >
               Liton Uddin
             </a>

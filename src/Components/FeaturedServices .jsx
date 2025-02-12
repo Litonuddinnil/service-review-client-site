@@ -28,7 +28,7 @@ const FeaturedServices = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="max-w-7xl  mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-8">
         <div className="relative flex flex-col justify-end z-10">
           <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mb-6">
@@ -65,7 +65,7 @@ const FeaturedServices = () => {
               className="w-full h-40 object-cover rounded-md mb-4"
             />
             <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-500 mb-4">
               {service.description.length > 100
                 ? `${service.description.substring(0, 100)}...`
                 : service.description}

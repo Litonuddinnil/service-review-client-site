@@ -25,8 +25,8 @@ const Banner = () => {
         }`}
       >
          
-        <div className="absolute flex items-center justify-center w-full h-full bg-background bg-opacity-50">
-          <div className="text-center text-text space-y-4">
+        <div className="absolute flex items-center justify-center w-full h-full  bg-opacity-50">
+          <div className="text-center  space-y-4">
             <Lottie animationData={animation1} className="w-40 mx-auto" />
             <h2 className="text-4xl font-bold">Welcome to Our Website</h2>
             <p className="text-lg">Discover amazing features and opportunities.</p>
@@ -41,8 +41,8 @@ const Banner = () => {
         }`}
       >
          
-        <div className="absolute flex items-center justify-center w-full h-full bg-background bg-opacity-50">
-          <div className=" text-center text-text space-y-4">
+        <div className="absolute flex items-center justify-center w-full h-full  bg-opacity-50">
+          <div className=" text-center  space-y-4">
             <Lottie animationData={animation2} className="w-40 mx-auto" />
             <h2 className="text-4xl font-bold">Innovate with Us</h2>
             <p className="text-lg">Join us to create something extraordinary.</p>
@@ -57,8 +57,8 @@ const Banner = () => {
         }`}
       >
        
-        <div className="absolute flex items-center justify-center w-full h-full bg-background bg-opacity-50">
-          <div className="text-center text-text space-y-4">
+        <div className="absolute flex items-center justify-center w-full h-full  bg-opacity-50">
+          <div className="text-center  space-y-4">
             <Lottie animationData={animation3} className="w-40 mx-auto" />
             <h2 className="text-4xl font-bold">Achieve Your Goals</h2>
             <p className="text-lg">Let us help you reach new heights.</p>

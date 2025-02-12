@@ -81,11 +81,11 @@ const MyServices = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-4 py-8">
       <Helmet>
         <title>Home | MyServices</title>
       </Helmet>
-      <h1 className="text-3xl font-semibold text-gray-800 mb-6">My Services</h1> 
+      <h1 className="text-3xl font-semibold mb-6">My Services</h1> 
       <div className="mb-6">
         <input
           type="text"
@@ -97,12 +97,12 @@ const MyServices = () => {
       </div>
 
       {/* Services Table */}
-      <table className="min-w-full bg-white shadow-md rounded-lg">
+      <table className="min-w-full   shadow-md rounded-lg">
         <thead>
           <tr>
-            <th className="p-4 text-left text-gray-600">Title</th>
-            <th className="p-4 text-left text-gray-600">Description</th>
-            <th className="p-4 text-left text-gray-600">Actions</th>
+            <th className="p-4 text-left text-gray-500">Title</th>
+            <th className="p-4 text-left text-gray-500">Description</th>
+            <th className="p-4 text-left text-gray-500">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -113,13 +113,13 @@ const MyServices = () => {
               <td className="p-4 border-b">
              <div className='flex items-center '>
              <button 
-                  className="bg-blue-600 text-text px-4 py-2 rounded-md hover:bg-blue-700"
+                  className="bg-blue-600  px-4 py-2 rounded-md hover:bg-blue-700"
                   onClick={() => handleUpdate(service)}
                 >
                   Update
                 </button>
                 <button
-                  className="ml-4 bg-red-600 text-text px-4 py-2 rounded-md hover:bg-red-700"
+                  className="ml-4 bg-red-600  px-4 py-2 rounded-md hover:bg-red-700"
                   onClick={() => handleDelete(service)}
                 >
                   Delete
@@ -136,10 +136,10 @@ const MyServices = () => {
       {showUpdateModal && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-1/3">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4">Update Service</h2>
+            <h2 className="text-xl font-semibold text-gray-500 mb-4">Update Service</h2>
             <form onSubmit={handleUpdateSubmit}>
               <div className="mb-4">
-                <label className="block text-gray-700">Title</label>
+                <label className="block text-gray-500">Title</label>
                 <input
                   type="text"
                   value={updatedTitle}
@@ -148,24 +148,24 @@ const MyServices = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Description</label>
+                <label className="block text-gray-500">Description</label>
                 <textarea
                   value={updatedDescription}
                   onChange={(e) => setUpdatedDescription(e.target.value)}
-                  className="w-full p-2 border border-gray-300 rounded-md"
+                  className="w-full p-2 border border-gray-500 rounded-md"
                 />
               </div>
               <div className="flex justify-end">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-text px-4 py-2 rounded-md hover:bg-blue-700"
+                  className="bg-blue-600  px-4 py-2 rounded-md hover:bg-blue-700"
                 >
                   Update
                 </button>
                 <button
                   type="button"
                   onClick={() => setShowUpdateModal(false)}
-                  className="ml-2 bg-gray-600 text-text px-4 py-2 rounded-md hover:bg-gray-700"
+                  className="ml-2 bg-gray-600  px-4 py-2 rounded-md hover:bg-gray-700"
                 >
                   Cancel
                 </button>
@@ -184,13 +184,13 @@ const MyServices = () => {
             <div className="flex justify-end">
               <button
                 onClick={(handleDeleteConfirm)}
-                className="bg-red-600 text-text px-4 py-2 rounded-md hover:bg-red-700"
+                className="bg-red-600  px-4 py-2 rounded-md hover:bg-red-700"
               >
                 Yes, Delete
               </button>
               <button
                 onClick={handleDeleteCancel}
-                className="ml-2 bg-gray-600 text-text px-4 py-2 rounded-md hover:bg-gray-700"
+                className="ml-2 bg-gray-600  px-4 py-2 rounded-md hover:bg-gray-700"
               >
                 Cancel
               </button>

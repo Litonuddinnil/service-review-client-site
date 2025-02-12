@@ -25,22 +25,22 @@ const  features = [
 console.log(features)
 const HowItWorks = () => {
   return (
-    <section className="py-12 bg-background">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-text mb-6">How Can We help you?</h2> 
+    <section className="py-8 ">
+      <div className="  max-w-7xl  mx-auto text-center">
+        <h2 className="text-3xl font-semibold  mb-6">How Can We help you?</h2> 
         <p className='text-lg text-gray-500 '>Find answers to all of your question here.</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Step 1 */}
       {
         features.map(feature =>(
-          <div className="card w-full bg-card shadow-xl rounded-lg p-6">
+          <div className="card w-full bg-card shadow-xl rounded-md p-6">
           <div className="card-body items-center justify-center text-center">
-            <div className="bg-black rounded-lg">
+            <div className="bg-black rounded-md">
               <img src={feature.logo} alt=""/>
             </div>
             <div>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">{feature.name}</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-bold  mb-4">{feature.name}</h3>
+            <p className="text-gray-500">
              {feature.description}
             </p>
             </div>

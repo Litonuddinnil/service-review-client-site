@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet-async';
 
 const HomeLayout = () => {
     return (
-        <div className='bg-background'>
+        <div>
             <Helmet>
                 <title>
                     Home

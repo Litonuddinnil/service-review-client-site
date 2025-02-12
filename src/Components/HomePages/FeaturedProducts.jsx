@@ -29,7 +29,7 @@ const FeaturedProducts = () => {
     ];
 
     return (
-        <div className="bg-background max-w-7xl mx-auto p-5 rounded-lg">
+        <div className=" max-w-7xl mx-auto p-5 rounded-md">
          <div className="flex items-center justify-between mb-8">
         <div className="relative flex flex-col justify-end z-10">
           <h2 className="lg:text-4xl md:text-2xl text-xl font-bold mb-6">
@@ -44,11 +44,11 @@ const FeaturedProducts = () => {
       </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {featuredServices.map(service => (
-                    <div key={service.id} className="bg-white p-4 shadow-md rounded-lg">
+                    <div key={service.id} className="bg-card p-4 shadow-xl rounded-md">
                         <img src={service.image} alt={service.name} className="w-full h-40 object-cover rounded-md" />
-                        <h3 className="text-xl font-semibold mt-2">{service.name}</h3>
-                        <p className="text-gray-600 text-sm">{service.description}</p>
-                        <p className="text-yellow-500 font-bold mt-2">⭐ {service.rating}</p>
+                        <h3 className="text-xl font-semibold mt-3">{service.name}</h3>
+                        <p className="text-gray-600 text-sm mt-3">{service.description}</p>
+                        <p className="text-yellow-500 font-bold mt-3">⭐ {service.rating}</p>
                     </div>
                 ))}
             </div>

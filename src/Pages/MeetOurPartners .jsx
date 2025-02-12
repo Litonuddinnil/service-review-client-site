@@ -35,10 +35,10 @@ const partners = [
 
 const MeetOurPartners = () => {
   return (
-    <div className="py-4 bg-background">
+    <div className="py-8 ">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800">Meet Our Partners</h2>
-        <p className="text-gray-600">
+        <h2 className="text-3xl font-bold">Meet Our Partners</h2>
+        <p>
           Learn more about our amazing partners and their contributions.
         </p>
       </div>
@@ -46,7 +46,7 @@ const MeetOurPartners = () => {
         {partners.map((partner, index) => (
           <div
             key={index}
-            className="card bg-card shadow-lg p-4 rounded-lg hover:shadow-xl"
+            className="card bg-card shadow-lg p-4 rounded-md hover:shadow-xl"
           >
             <div className="flex items-center mb-4">
               <img
@@ -54,11 +54,11 @@ const MeetOurPartners = () => {
                 alt={`${partner.name} Logo`}
                 className="h-16 w-16  mr-2 rounded-full"
               />
-              <h3 className="text-xl font-semibold text-gray-800">
+              <h3 className="text-xl font-semibold ">
                 {partner.name}
               </h3>
             </div>
-            <p className="text-gray-600">{partner.description}</p>
+            <p className="text-gray-500">{partner.description}</p>
           </div>
         ))}
       </div>
