@@ -35,6 +35,9 @@ const Navbar = () => {
           Services
         </NavLink>
       </li>
+     {
+      user  &&
+      <> 
       <li>
         <NavLink
           to="/add-service"
@@ -47,16 +50,6 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/my-reviews"
-          className={({ isActive }) =>
-            isActive ? "text-primary font-bold" : "hover:text-primary"
-          }
-        >
-          My Reviews
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
           to="/my-services"
           className={({ isActive }) =>
             isActive ? "text-primary font-bold" : "hover:text-primary"
@@ -65,48 +58,59 @@ const Navbar = () => {
           My Services
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/my-reviews"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : "hover:text-primary"
+          }
+        >
+          My Reviews
+        </NavLink>
+      </li>
+      </>
+     } 
+      <li>
+        <NavLink
+          to="/faqs"
+          className={({ isActive }) =>
+            isActive ? "text-primary font-bold" : "hover:text-primary"
+          }
+        >
+           FAQs
+        </NavLink>
+      </li>
     </>
   );
 
-  return (
-    <nav className="sticky top-0 z-50 bg-background shadow-md px-4 py-3 md:flex md:justify-between md:items-center">
-      <div className="flex justify-between items-center">
-        <Link
-          to="/"
-          className="text-2xl font-bold text-primary flex items-center"
-        >
-          <img
-            className="w-14 md:w-16 h-14 md:h-16 rounded-full"
-            src="https://i.ibb.co/71k6Ny9/logo.png"
-            alt="Logo"
-          />
-        </Link>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-3xl focus:outline-none"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? "✕" : "☰"}
-        </button>
-      </div>
+  return (
+    <nav className="sticky top-0 z-50 bg-white shadow-md px-6 md:px-10 lg:px-16 py-3 flex justify-between items-center">
+      
+      {/* Logo */}
+      <Link to="/" className="text-2xl font-bold text-primary flex items-center">
+        <img
+          className="w-14 md:w-16 h-14 md:h-16 rounded-full"
+          src="https://i.ibb.co/71k6Ny9/logo.png"
+          alt="Logo"
+        />
+      </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex list-none space-x-6">{links}</div>
-
+      <div className="hidden md:flex space-x-6 list-none">{links}</div> 
       {/* Mobile Navigation */}
-      <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-        <ul className="menu bg-white shadow-lg rounded-md p-4 mt-3 space-y-3">
-          {links}
-        </ul>
-      </div>
+      {isMenuOpen && (
+        <div className="absolute top-16 left-0 w-full bg-white shadow-lg rounded-md p-4 md:hidden">
+          <ul className="space-y-3">{links}</ul>
+        </div>
+      )}
 
       {/* Auth Buttons */}
       <div className="flex items-center space-x-4">
         {user ? (
           <>
             <button
-              className="btn btn-error text-text rounded-md"
+              className="btn btn-error text-white rounded-md"
               onClick={logOut}
             >
               Logout
@@ -128,15 +132,21 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <Link to="/login" className="btn text-text bg-primary">
+            <Link to="/login" className="btn bg-primary text-white">
               Login
             </Link>
-            <Link to="/register" className="btn text-text bg-secondary">
+            <Link to="/register" className="btn bg-secondary text-white">
               Register
             </Link>
           </>
         )}
       </div>
+      <button
+        className="md:hidden text-3xl focus:outline-none"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        {isMenuOpen ? "✕" : "☰"}
+      </button>
     </nav>
   );
 };

@@ -1,184 +1,179 @@
- 
 import Swal from "sweetalert2";
 import useAuth from "../CustomHook/useAuth";
-import { Helmet } from "react-helmet-async"; 
- 
+import { Helmet } from "react-helmet-async";
+
 const AddService = () => {
-    const { user } = useAuth() 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        console.log([...formData.entries()]);
-        const formObject = Object.fromEntries(formData.entries());
-        console.log(formObject);
-        // Here you can add code to save the service to your database
-        fetch('https://service-review-system-server-site.vercel.app/services', {
-            method: "POST",
-            headers: {
-              "content-type":"application/json",
-            },
-            body: JSON.stringify(formObject),
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              if (data.insertedId) {
-                Swal.fire({
-                  position: "top-center",
-                  icon: "success",
-                  title: "Good Job", 
-                  text:"Your work has been saved",
-                }); 
-              }
-            });
-    };
-    
-    return (
-        <div className="container mx-auto py-10 px-5 md:px-10">
-            <Helmet><title>Home | AddService</title></Helmet>
-            <h1 className="text-3xl font-bold text-center mb-10">Add a New Service</h1>
-            <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 space-y-6">
-                
-                {/* Service Image */}
-                <div className="form-control">
-                    <label className="label" htmlFor="image">
-                        <span className="label-text">Service Image</span>
-                    </label>
-                    <input
-                        type="url"
-                        id="image"
-                        name="image"
-                        className="input input-bordered w-full"
-                        required
-                    />
-                </div>
+  const { user } = useAuth();
 
-                {/* Service Title */}
-                <div className="form-control">
-                    <label className="label" htmlFor="title">
-                        <span className="label-text">Service Title</span>
-                    </label>
-                    <input
-                        type="text"
-                        id="title"
-                        name="title"
-                        className="input input-bordered w-full"
-                        placeholder="Enter service title"
-                        required
-                    />
-                </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const formObject = Object.fromEntries(formData.entries());
 
-                {/* Company Name */}
-                <div className="form-control">
-                    <label className="label" htmlFor="companyName">
-                        <span className="label-text">Company Name</span>
-                    </label>
-                    <input
-                        type="text"
-                        id="companyName"
-                        name="companyName"
-                        className="input input-bordered w-full"
-                        placeholder="Enter company name"
-                        required
-                    />
-                </div>
+    fetch("https://service-review-system-server-site.vercel.app/services", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(formObject),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          Swal.fire({
+            position: "top-center",
+            icon: "success",
+            title: "Service Added!",
+            text: "Your service has been successfully added.",
+            timer: 2000,
+            showConfirmButton: false,
+          });
+        }
+      });
+  };
 
-                {/* Website */}
-                <div className="form-control">
-                    <label className="label" htmlFor="website">
-                        <span className="label-text">Website</span>
-                    </label>
-                    <input
-                        type="url"
-                        id="website"
-                        name="website"
-                        className="input input-bordered w-full"
-                        placeholder="Enter company website"
-                        required
-                    />
-                </div>
+  return (
+    <div className="container mx-auto py-12 px-6">
+      <Helmet>
+        <title>Home | Add Service</title>
+      </Helmet>
+      
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Add a New Service</h2>
+        <p className="text-gray-500 mt-2">Fill in the details below to add your service.</p>
+      </div>
 
-                {/* Description */}
-                <div className="form-control">
-                    <label className="label" htmlFor="description">
-                        <span className="label-text">Description</span>
-                    </label>
-                    <textarea
-                        id="description"
-                        name="description"
-                        className="textarea textarea-bordered w-full"
-                        placeholder="Enter service description"
-                        required
-                    />
-                </div>
+      <div className="max-w-2xl mx-auto bg-white shadow-xl rounded-lg p-8">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          
+          {/* Service Image */}
+          <div>
+            <label htmlFor="image" className="text-gray-700 font-medium">Service Image URL</label>
+            <input
+              type="url"
+              id="image"
+              name="image"
+              className="input input-bordered w-full mt-2"
+              placeholder="Enter image URL"
+              required
+            />
+          </div>
 
-                {/* Category */}
-                <div className="form-control">
-                    <label className="label" htmlFor="category">
-                        <span className="label-text">Category</span>
-                    </label>
-                    <input
-                        type="text"
-                        id="category"
-                        name="category"
-                        className="input input-bordered w-full"
-                        placeholder="Enter service category"
-                        required
-                    />
-                </div>
+          {/* Service Title */}
+          <div>
+            <label htmlFor="title" className="text-gray-700 font-medium">Service Title</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              className="input input-bordered w-full mt-2"
+              placeholder="Enter service title"
+              required
+            />
+          </div>
 
-                {/* Price */}
-                <div className="form-control">
-                    <label className="label" htmlFor="price">
-                        <span className="label-text">Price</span>
-                    </label>
-                    <input
-                        type="number"
-                        id="price"
-                        name="price"
-                        className="input input-bordered w-full"
-                        placeholder="Enter service price"
-                        required
-                    />
-                </div> 
-                <div className="form-control">
-                    <label className="label" htmlFor="addedDate">
-                        <span className="label-text">Added Date</span>
-                    </label>
-                    <input
-                        type="text"
-                        id="addedDate"
-                        name="addedDate"
-                        value={new Date().toLocaleDateString()}
-                        className="input input-bordered w-full"
-                        readOnly
-                        required
-                    />
-                </div>
+          {/* Company Name */}
+          <div>
+            <label htmlFor="companyName" className="text-gray-700 font-medium">Company Name</label>
+            <input
+              type="text"
+              id="companyName"
+              name="companyName"
+              className="input input-bordered w-full mt-2"
+              placeholder="Enter company name"
+              required
+            />
+          </div>
 
-                {/* User Email (From Auth) */}
-                <div className="form-control">
-                    <label className="label" htmlFor="userEmail">
-                        <span className="label-text">User Email</span>
-                    </label>
-                    <input
-                        type="email"
-                        id="userEmail"
-                        name="email"
-                        value={user?.email || ""}
-                        className="input input-bordered w-full"
-                        readOnly
-                        required
-                    />
-                </div>
-                {/* Submit Button */}
-                <button type="submit" className="btn btn-success text-balance text-lg w-full">
-                    Add Service
-                </button>
-            </form>
-        </div>
-    );
+          {/* Website */}
+          <div>
+            <label htmlFor="website" className="text-gray-700 font-medium">Website</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              className="input input-bordered w-full mt-2"
+              placeholder="Enter company website"
+              required
+            />
+          </div>
+
+          {/* Description */}
+          <div>
+            <label htmlFor="description" className="text-gray-700 font-medium">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              className="textarea textarea-bordered w-full mt-2"
+              placeholder="Enter service description"
+              rows="3"
+              required
+            />
+          </div>
+
+          {/* Category */}
+          <div>
+            <label htmlFor="category" className="text-gray-700 font-medium">Category</label>
+            <input
+              type="text"
+              id="category"
+              name="category"
+              className="input input-bordered w-full mt-2"
+              placeholder="Enter service category"
+              required
+            />
+          </div>
+
+          {/* Price */}
+          <div>
+            <label htmlFor="price" className="text-gray-700 font-medium">Price</label>
+            <input
+              type="number"
+              id="price"
+              name="price"
+              className="input input-bordered w-full mt-2"
+              placeholder="Enter service price"
+              required
+            />
+          </div>
+
+          {/* Added Date */}
+          <div>
+            <label htmlFor="addedDate" className="text-gray-700 font-medium">Added Date</label>
+            <input
+              type="text"
+              id="addedDate"
+              name="addedDate"
+              value={new Date().toLocaleDateString()}
+              className="input input-bordered w-full mt-2"
+              readOnly
+            />
+          </div>
+
+          {/* User Email */}
+          <div>
+            <label htmlFor="userEmail" className="text-gray-700 font-medium">Your Email</label>
+            <input
+              type="email"
+              id="userEmail"
+              name="email"
+              value={user?.email || ""}
+              className="input input-bordered w-full mt-2"
+              readOnly
+            />
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            className="btn bg-primary text-white w-full text-lg py-3"
+          >
+            Add Service
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default AddService;
-
- 
